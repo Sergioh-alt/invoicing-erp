@@ -1,0 +1,144 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4
+configfile: pytest.ini
+plugins: cov-7.0.0, mock-3.15.1
+collecting ... collected 20 items
+
+tests/test_database.py::TestDatabaseInitialization::test_create_database_in_memory PASSED [  5%]
+tests/test_database.py::TestDatabaseInitialization::test_create_database_with_file PASSED [ 10%]
+tests/test_database.py::TestDatabaseInitialization::test_schema_version_is_set FAILED [ 15%]
+tests/test_database.py::TestAddFactura::test_add_factura_basic FAILED    [ 20%]
+tests/test_database.py::TestAddFactura::test_add_factura_returns_unique_ids FAILED [ 25%]
+tests/test_database.py::TestAddFactura::test_add_factura_with_pdf_path FAILED [ 30%]
+tests/test_database.py::TestAddFactura::test_add_factura_with_none_values FAILED [ 35%]
+tests/test_database.py::TestListFacturas::test_list_empty_database FAILED [ 40%]
+tests/test_database.py::TestListFacturas::test_list_single_factura FAILED [ 45%]
+tests/test_database.py::TestListFacturas::test_list_multiple_facturas FAILED [ 50%]
+tests/test_database.py::TestListFacturas::test_filter_by_status_pendiente FAILED [ 55%]
+tests/test_database.py::TestListFacturas::test_search_by_numero_factura FAILED [ 60%]
+tests/test_database.py::TestListFacturas::test_search_by_proveedor FAILED [ 65%]
+tests/test_database.py::TestUpdateFactura::test_update_factura_basic FAILED [ 70%]
+tests/test_database.py::TestUpdateFactura::test_update_preserves_pdf_path FAILED [ 75%]
+tests/test_database.py::TestDeleteFactura::test_delete_factura FAILED    [ 80%]
+tests/test_database.py::TestDeleteFactura::test_delete_nonexistent_factura FAILED [ 85%]
+tests/test_database.py::TestMarkPagada::test_mark_pagada FAILED          [ 90%]
+tests/test_database.py::TestSnooze::test_set_snooze FAILED               [ 95%]
+tests/test_database.py::TestSnooze::test_clear_snooze FAILED             [100%]
+
+================================== FAILURES ===================================
+E   sqlite3.OperationalError: no such table: meta
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:31: sqlite3.OperationalError: no such table: meta
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:166: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:128: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+E   sqlite3.OperationalError: no such table: facturas
+C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\app\model\database.py:94: sqlite3.OperationalError: no such table: facturas
+============================== warnings summary ===============================
+tests\test_database.py:10
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:10: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:11
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:11: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:36
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:36: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:37
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:37: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:113
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:113: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:114
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:114: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:195
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:195: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:196
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:196: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:266
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:266: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:267
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:267: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:299
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:299: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:300
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:300: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+tests\test_database.py:324
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:324: PytestUnknownMarkWarning: Unknown pytest.mark.database - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.database
+
+tests\test_database.py:325
+  C:\Users\Usuario\Desktop\Facturas_GanaTodo_v4\tests\test_database.py:325: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_database.py::TestDatabaseInitialization::test_schema_version_is_set
+FAILED tests/test_database.py::TestAddFactura::test_add_factura_basic - sqlit...
+FAILED tests/test_database.py::TestAddFactura::test_add_factura_returns_unique_ids
+FAILED tests/test_database.py::TestAddFactura::test_add_factura_with_pdf_path
+FAILED tests/test_database.py::TestAddFactura::test_add_factura_with_none_values
+FAILED tests/test_database.py::TestListFacturas::test_list_empty_database - s...
+FAILED tests/test_database.py::TestListFacturas::test_list_single_factura - s...
+FAILED tests/test_database.py::TestListFacturas::test_list_multiple_facturas
+FAILED tests/test_database.py::TestListFacturas::test_filter_by_status_pendiente
+FAILED tests/test_database.py::TestListFacturas::test_search_by_numero_factura
+FAILED tests/test_database.py::TestListFacturas::test_search_by_proveedor - s...
+FAILED tests/test_database.py::TestUpdateFactura::test_update_factura_basic
+FAILED tests/test_database.py::TestUpdateFactura::test_update_preserves_pdf_path
+FAILED tests/test_database.py::TestDeleteFactura::test_delete_factura - sqlit...
+FAILED tests/test_database.py::TestDeleteFactura::test_delete_nonexistent_factura
+FAILED tests/test_database.py::TestMarkPagada::test_mark_pagada - sqlite3.Ope...
+FAILED tests/test_database.py::TestSnooze::test_set_snooze - sqlite3.Operatio...
+FAILED tests/test_database.py::TestSnooze::test_clear_snooze - sqlite3.Operat...
+================== 18 failed, 2 passed, 14 warnings in 0.18s ==================

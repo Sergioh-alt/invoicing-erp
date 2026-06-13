@@ -1,0 +1,16 @@
+config.json
+*.spec
+data/*.sqlite
+data/*.db
+backups/
+logs/
+.activation
+*.coverage
+htmlcov/
+__pycache__/
+*.pyc
+*.pyo
+*.bat~
+*.tmp
+.DS_Store
+Thumbs.db
